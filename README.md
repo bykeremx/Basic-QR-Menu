@@ -100,17 +100,6 @@ php artisan serve
 
 - **Menü Tasarımı**: Menü sayfasının görünümünü `resources/views` dizininde bulunan Blade şablonlarını düzenleyerek özelleştirebilirsiniz.
 - **Admin Paneli**: Admin paneli üzerinden menü ve kategori düzenlemelerini kolayca yapabilirsiniz. Admin paneli kullanıcı rolü yönetimini `app/Models/User.php` dosyasından yapılandırabilirsiniz.
-
----
-
-## **Ekran Görüntüleri** 📸
-
-![QR Menü](https://via.placeholder.com/800x400.png?text=QR+Menu+Ekran+Görseli)
-*QR Menü Kullanıcı Görünümü*
-
-![Admin Paneli](https://via.placeholder.com/800x400.png?text=Admin+Paneli+Ekran+Görseli)
-*Admin Paneli Görünümü*
-
 ---
 
 ## **Katkıda Bulunma** 🌟
