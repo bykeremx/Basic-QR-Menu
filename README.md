@@ -1,32 +1,3 @@
-Veritabanını dışa aktarmak için bir **SQL dosyası** oluşturmanız gerekecek. Laravel’de **migration** kullanmadan, veritabanınızı manuel olarak dışa aktarabilir ve bunu README dosyanıza ekleyebilirsiniz. İşte nasıl yapabileceğiniz:
-
-### 1. **Veritabanını Dışa Aktarma (Export)**
-
-Veritabanınızın **qr-menu-script** adını taşıdığını varsayarak, veritabanınızı dışa aktarmak için şu adımları izleyebilirsiniz:
-
-#### a. **phpMyAdmin Kullanıyorsanız**:
-
-1. phpMyAdmin’e giriş yapın.
-2. Sol menüden **qr-menu-script** veritabanını seçin.
-3. Üst menüdeki **Export** (Dışa Aktar) sekmesine tıklayın.
-4. **Quick** (Hızlı) seçeneğini seçin ve **SQL** formatını seçtiğinizden emin olun.
-5. **Go** butonuna tıklayın. Bu, veritabanınızı bir `.sql` dosyasına dışa aktaracaktır.
-
-#### b. **MySQL Komut Satırı Kullanıyorsanız**:
-
-Aşağıdaki komutu kullanarak veritabanını dışa aktarabilirsiniz:
-
-```bash
-mysqldump -u [kullanıcı_adınız] -p qr-menu-script > qr-menu-script.sql
-```
-
-Bu komut, `qr-menu-script` veritabanını bir `.sql` dosyasına dışa aktarır.
-
-### 2. **README Dosyasına Veritabanı Yedekleme Bilgisi Ekleme**
-
-Aşağıdaki adımları README dosyanıza ekleyebilirsiniz:
-
----
 
 ## **Veritabanı Kurulumu** 🗄️
 
