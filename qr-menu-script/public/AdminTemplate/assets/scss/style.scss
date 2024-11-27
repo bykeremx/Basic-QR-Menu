@@ -1,0 +1,170 @@
+@import 'bootstrap/bootstrap';
+@import 'bootstrap/variables';
+@import 'bootstrap/mixins';
+
+$font-primary: 'Lato',Arial, sans-serif;
+$primary: #fd5f00;
+
+body{
+	font-family: $font-primary;
+	font-size: 16px;
+	line-height: 1.8;
+	font-weight: normal;
+	background: #fafafa;
+	color: lighten($black,50%);
+}
+a {
+	transition: .3s all ease;
+	color: $primary;
+	&:hover, &:focus {
+		text-decoration: none !important;
+		outline: none !important;
+		box-shadow: none;
+	}
+}
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+	line-height: 1.5;
+	font-weight: 400;
+	font-family: $font-primary;
+	color: $black;
+}
+
+.bg-primary{
+	background: $primary !important;
+}
+
+.ftco-section{
+	padding: 7em 0;
+}
+
+.ftco-no-pt{
+	padding-top: 0;
+}
+.ftco-no-pb{
+	padding-bottom: 0;
+}
+//HEADING SECTION
+.heading-section{
+	font-size: 28px;
+	color: $black;
+}
+
+//COVER BG
+.img{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+
+.select2-container {
+  min-width: 600px;
+  @include media-breakpoint-down(md){
+  	min-width: 100%;
+  }
+}
+
+.select2-results__option {
+  padding-right: 20px;
+  vertical-align: middle;
+}
+.select2-results__option:before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  height: 20px;
+  width: 20px;
+  border: 2px solid rgba(0,0,0,.2);
+  border-radius: 4px;
+  background-color: transparent;
+  margin-right: 15px;
+  margin-left: 10px;
+  vertical-align: middle;
+
+}
+.select2-results__option[aria-selected=true]:before {
+  font-family:'fontAwesome';
+  content: "\f00c";
+  color: $white;
+  background-color: $primary;
+  border: 0;
+  display: inline-block;
+  padding: 0;
+  line-height: 1.2;
+  padding-left: 2px;
+}
+.select2-container--default .select2-results__option[aria-selected=true] {
+	background-color: #fff;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+	background-color: $white;
+	color: $black;
+}
+
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
+	border-radius: 4px;
+	-webkit-box-shadow: 0px 3px 22px -15px rgba(0,0,0,0.8);
+	-moz-box-shadow: 0px 3px 22px -15px rgba(0,0,0,0.8);
+	box-shadow: 0px 3px 22px -15px rgba(0,0,0,0.8);
+
+}
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+	border-color: $primary;
+	border-width: 2px;
+}
+.select2-container--default .select2-selection--multiple {
+	border-width: 2px;
+	border-color: transparent;
+	padding: 5px 10px;
+	line-height: 1.6;
+	@include transition(.3s);
+
+	margin-bottom: 10px;
+	-webkit-box-shadow: 0px 3px 22px -15px rgba(0,0,0,0.63);
+	-moz-box-shadow: 0px 3px 22px -15px rgba(0,0,0,0.63);
+	box-shadow: 0px 3px 22px -15px rgba(0,0,0,0.63);
+}
+.select2-container--open .select2-dropdown--below {
+	padding: 10px 0;
+	border-radius: 4px;
+	border: none;
+	-webkit-box-shadow: 0px 3px 22px -15px rgba(0,0,0,0.63);
+	-moz-box-shadow: 0px 3px 22px -15px rgba(0,0,0,0.63);
+	box-shadow: 0px 3px 22px -15px rgba(0,0,0,0.63);
+
+}
+.select2-selection .select2-selection--multiple:after {
+	content: 'hhghgh';
+}
+
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice{
+	border: none;
+	background: rgba(0,0,0,.1);
+	font-size: 15px;
+	padding: 2px 10px;
+	color: lighten($black,50%);
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove{
+	margin-right: 5px;
+}
+
+
+.select2-container--default .select2-selection--multiple .select2-selection__clear{
+	color: $primary;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

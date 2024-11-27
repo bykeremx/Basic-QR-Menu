@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+body {
+    background-color: rgb(122, 61, 61) !important;
+    color: white !important;
+
+}
+
+.card_food {
+    width: auto;
+    height: auto;
+    padding: 50px;
+    background-size: 115% !important;
+    border-radius: 5px;
+    /*box-shadow: rgb(4, 6, 8) 0px 20px 30px -10px;*/
+    box-shadow: inset 50px 50px 200px rgb(0, 0, 0);
+    /*box-shadow: rgb(0, 0, 0) 0px 5px 15px;*/
+    color: white;
+    font-size: 50px;
+    text-shadow: .1em .1em 0 hsl(0, 0%, 8%);
+    font-family: 'Indie Flower', cursive;
+    margin-bottom: 10px;
+    transition: all 0.2s;
+}
+
+.card_food:hover {
+    box-shadow: inset 20px 20px 100px rgb(21, 21, 21);
+    background-size: 120% !important;
+    cursor: pointer;
+    transition: all 0.2s;
+
+
+}
+
+.food_description {
+    width: 70%;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.47);
+    border-radius: 0px 20px 0px 0px;
+    font-size: 20px;
+}
+
+.food_description2 {
+    width: 100%;
+    height: 40px;
+    font-size: 25px !important;
+    background-color: rgba(229, 81, 81, 0.259);
+    border-radius: 20px 0px 0px 0px;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.menu_food {
+    width: auto;
+    height: auto;
+    /*padding: 50px;*/
+    background-size: 115% !important;
+    border-radius: 5px;
+    /*box-shadow: rgb(4, 6, 8) 0px 20px 30px -10px;*/
+    box-shadow: inset 50px 50px 200px rgb(0, 0, 0);
+    /*box-shadow: rgb(0, 0, 0) 0px 5px 15px;*/
+    color: white;
+    font-size: 50px;
+    /*text-shadow: .1em .1em 0 hsl(0, 0%, 8%);*/
+    font-family: 'Indie Flower', cursive;
+    margin-bottom: 10px;
+    transition: all 0.2s;
+}
+
+#slider_imgs {
+    height: 400px !important;
+    object-fit: cover !important;
+    box-shadow: inset 50px 50px 200px rgb(0, 0, 0) !important;
+}
+
+.menu_food:hover {
+    box-shadow: inset 20px 20px 100px rgb(21, 21, 21);
+    background-size: 120% !important;
+    cursor: pointer;
+    transition: all 0.2s;
+
+
+}
+
+.card_food_list_slider {
+    width: auto;
+    height: 100px;
+    background-size: 115% !important;
+    border-radius: 5px;
+    /*box-shadow: rgb(4, 6, 8) 0px 20px 30px -10px;*/
+    box-shadow: inset 20px 20px 50px rgb(0, 0, 0);
+    /*box-shadow: rgb(0, 0, 0) 0px 5px 15px;*/
+    color: white;
+    font-size: 25px;
+    padding-top:27px;
+    text-shadow: .1em .1em 0 hsl(0, 0%, 8%);
+    font-family: 'Indie Flower', cursive;
+    margin-bottom: 10px;
+    transition: all 0.2s;
+    margin: 5px;
+}
+
+.card_food_list_slider:hover {
+    box-shadow: inset 5px 5px 25px rgb(21, 21, 21);
+    background-size: 120% !important;
+    cursor: pointer;
+    transition: all 0.2s;
+
+
+}
+
+.font_menu_name {
+    font-family: 'Indie Flower', cursive !important;
+    text-shadow: .1em .1em 0 hsl(0, 0%, 2%);
+}
+
+.like_id {
+    margin-top: -20px !important;
+
+}
+
+.anasayfa h1 {
+    color: white !important;
+}
+
+.slider-item-div {
+    box-shadow: inset 50px 50px 200px rgb(0, 0, 0) !important;
+}
+
+/* search box */
+
+
+.splide__slide__desing {
+    width: 100% !important;
+    /* Genişlik 100% olsun */
+    height: 400px !important;
+    object-fit: cover;
+    /* Otomatik yükseklik ayarı */
+}
+
+@media screen and (max-width: 600px) {
+    .card_food {
+        padding: 30px;
+    }
+
+    .menu_food {
+        font-size: 25px !important;
+        /*padding-bottom:20px !important;*/
+        /*padding-top:-15px !important;*/
+    }
+
+    .card_food_list_slider {
+        width: auto;
+        height: 70px;
+        background-size: 200% !important;
+        border-radius: 5px;
+        /*box-shadow: rgb(4, 6, 8) 0px 20px 30px -10px;*/
+        box-shadow: inset 20px 20px 50px rgb(0, 0, 0);
+        /*box-shadow: rgb(0, 0, 0) 0px 5px 15px;*/
+        color: white;
+        padding-top:10px;
+        font-size: 15px;
+        text-shadow: .1em .1em 0 hsl(0, 0%, 8%);
+        font-family: 'Indie Flower', cursive;
+        margin-bottom: 10px;
+        transition: all 0.2s;
+        margin: 5px;
+    }
+
+    .card_food_list_slider:hover {
+        box-shadow: inset 20px 15px 25px rgb(21, 21, 21);
+        background-size: 250% !important;
+        cursor: pointer;
+        transition: all 0.2s;
+
+
+    }
+
+    #slider_imgs {
+        height: 200px !important;
+        object-fit: cover !important;
+        box-shadow: inset 50px 50px 200px rgb(0, 0, 0) !important;
+    }
+
+    .splide__slide__desing {
+        width: 100% !important;
+        /* Genişlik 100% olsun */
+        height: 200px !important;
+        /* Otomatik yükseklik ayarı */
+    }
+}
