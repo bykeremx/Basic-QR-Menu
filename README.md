@@ -1,37 +1,4 @@
 
-## **Veritabanı Kurulumu** 🗄️
-
-Eğer veritabanınızı manuel olarak kurmak istiyorsanız, aşağıdaki adımları izleyebilirsiniz:
-
-### 1. Veritabanı Yedeklemesi:
-Veritabanını dışa aktarmak için, `qr-menu-script.sql` dosyasını kullanabilirsiniz. Bu dosya, veritabanınızın yapısını ve içeriğini içerir.
-
-### 2. **Veritabanı Yedekleme Adımları**:
-
-1. **Veritabanını Yükleyin**:
-   Veritabanı yedeğinizi yüklemek için, dışa aktardığınız `.sql` dosyasını kullanın.
-
-   Eğer **phpMyAdmin** kullanıyorsanız:
-   - phpMyAdmin’e giriş yapın.
-   - Yeni bir veritabanı oluşturun (adı `qr-menu-script` olacak şekilde).
-   - **Import** (İçe Aktar) sekmesine tıklayın ve `qr-menu-script.sql` dosyasını seçin.
-
-   Eğer **MySQL Komut Satırı** kullanıyorsanız:
-   ```bash
-   mysql -u [kullanıcı_adınız] -p qr-menu-script < qr-menu-script.sql
-   ```
-
-2. **Veritabanı Yapısını Kontrol Edin**:
-   Veritabanınız yüklendikten sonra, gerekli tabloların ve verilerin bulunduğundan emin olun.
-
----
-
-### 3. **README Dosyanızın Tam Hali**
-
-README dosyanızda, yukarıdaki veritabanı dışa aktarma adımlarını şu şekilde güncelleyebilirsiniz:
-
----
-
 # **Basic-Qr-Menu-Script** 🛒📱
 
 QR Kod tabanlı dijital menü sistemi, restoranlar için geliştirilmiş modern bir çözümdür. Bu proje, Laravel PHP framework'ü kullanılarak oluşturulmuştur ve kullanıcıların QR kodları tarayarak dijital menülerine erişebilmelerini sağlar. Admin paneli ile menü yönetimi, kategori düzenlemeleri ve ürün eklemeleri kolayca yapılabilir.
