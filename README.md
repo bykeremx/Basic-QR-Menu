@@ -20,47 +20,113 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Tabii, işte PHP Laravel ile yazdığınız **QR Menü Scripti** için şık ve açıklayıcı bir **README** dosyası önerisi:
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+# **Basic-Qr-Menu-Script** 🛒📱
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+QR Kod tabanlı dijital menü sistemi, restoranlar için geliştirilmiş modern bir çözümdür. Bu proje, Laravel PHP framework'ü kullanılarak oluşturulmuştur ve kullanıcıların QR kodları tarayarak dijital menülerine erişebilmelerini sağlar. Admin paneli ile menü yönetimi, kategori düzenlemeleri ve ürün eklemeleri kolayca yapılabilir.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## **Özellikler** 🚀
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- **QR Menü**: Müşteriler, QR kodları tarayarak dijital menüye erişebilirler.
+- **Admin Paneli**: Menüler, kategoriler ve ürünler yönetilebilir.
+- **Kategori Yönetimi**: Ürünleri kategoriler halinde düzenleme imkanı.
+- **Ürün Ekleme / Güncelleme**: Admin paneli üzerinden ürün ekleyebilir veya mevcut ürünleri güncelleyebilirsiniz.
+- **Responsive Tasarım**: Menü, her tür cihazda (mobil, tablet, masaüstü) uyumlu olarak görüntülenebilir.
+- **Kolay Kurulum**: Laravel projesi kolayca kurulur ve çalıştırılır.
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+## **Kurulum** 🛠️
 
-## Contributing
+### 1. **Gereksinimler**:
+- PHP 7.3 veya daha yeni bir sürüm
+- Composer
+- MySQL veya SQLite (Veritabanı)
+- Laravel 8.x veya daha yeni sürüm
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 2. **Proje Kurulumu**:
 
-## Code of Conduct
+#### 2.1. **Depoyu Klonlayın**:
+```bash
+git clone https://github.com/bykeremx/Basic-Qr-Menu-Script.git
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+#### 2.2. **Composer Paketlerini Yükleyin**:
+```bash
+cd Basic-Qr-Menu-Script
+composer install
+```
 
-## Security Vulnerabilities
+#### 2.3. **Env Dosyasını Düzenleyin**:
+Projenin kök dizininde `.env` dosyasını oluşturun ve veritabanı ayarlarını yapılandırın:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```ini
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=qr_menu_db
+DB_USERNAME=root
+DB_PASSWORD=
+```
 
-## License
+#### 2.4. **Veritabanı Migrasyonlarını Çalıştırın**:
+```bash
+php artisan migrate
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+#### 2.5. **Laravel'in Geliştirme Sunucusunu Başlatın**:
+```bash
+php artisan serve
+```
+
+---
+
+## **Kullanım** 💻
+
+1. **Admin Paneline Giriş**: `http://localhost:8000/admin` adresine gidin ve giriş yapın. Admin kullanıcı adı ve şifresiyle giriş yaptıktan sonra menü ve ürünleri yönetebilirsiniz.
+
+2. **QR Kodları Oluşturma**: Admin paneli üzerinden menü eklediğinizde, her bir menü için bir QR kodu otomatik olarak oluşturulacaktır.
+
+3. **Kullanıcı Menüsü**: Müşteriler QR kodunu tarayarak menüye erişebilir ve ürünleri görüntüleyebilir.
+
+---
+
+## **Özelleştirme** ⚙️
+
+- **Menü Tasarımı**: Menü sayfasının görünümünü `resources/views` dizininde bulunan Blade şablonlarını düzenleyerek özelleştirebilirsiniz.
+- **Admin Paneli**: Admin paneli üzerinden menü ve kategori düzenlemelerini kolayca yapabilirsiniz. Admin paneli kullanıcı rolü yönetimini `app/Models/User.php` dosyasından yapılandırabilirsiniz.
+
+---
+
+## **Ekran Görüntüleri** 📸
+
+![QR Menü](https://via.placeholder.com/800x400.png?text=QR+Menu+Ekran+Görseli)
+*QR Menü Kullanıcı Görünümü*
+
+![Admin Paneli](https://via.placeholder.com/800x400.png?text=Admin+Paneli+Ekran+Görseli)
+*Admin Paneli Görünümü*
+
+---
+
+## **Katkıda Bulunma** 🌟
+
+Eğer projeye katkıda bulunmak isterseniz, aşağıdaki adımları takip edebilirsiniz:
+
+1. Bu depoyu çatallayın (fork).
+2. Geliştirmelerinizi kendi depo kopyanızda yapın.
+3. Değişikliklerinizi bir pull request olarak gönderin.
+
+---
+
+## **Lisans** 📄
+
+Bu proje **MIT Lisansı** altında lisanslanmıştır.
+
+---
+
+
