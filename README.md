@@ -1,26 +1,63 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Veritabanını dışa aktarmak için bir **SQL dosyası** oluşturmanız gerekecek. Laravel’de **migration** kullanmadan, veritabanınızı manuel olarak dışa aktarabilir ve bunu README dosyanıza ekleyebilirsiniz. İşte nasıl yapabileceğiniz:
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+### 1. **Veritabanını Dışa Aktarma (Export)**
 
-## About Laravel
+Veritabanınızın **qr-menu-script** adını taşıdığını varsayarak, veritabanınızı dışa aktarmak için şu adımları izleyebilirsiniz:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+#### a. **phpMyAdmin Kullanıyorsanız**:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+1. phpMyAdmin’e giriş yapın.
+2. Sol menüden **qr-menu-script** veritabanını seçin.
+3. Üst menüdeki **Export** (Dışa Aktar) sekmesine tıklayın.
+4. **Quick** (Hızlı) seçeneğini seçin ve **SQL** formatını seçtiğinizden emin olun.
+5. **Go** butonuna tıklayın. Bu, veritabanınızı bir `.sql` dosyasına dışa aktaracaktır.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-Tabii, işte PHP Laravel ile yazdığınız **QR Menü Scripti** için şık ve açıklayıcı bir **README** dosyası önerisi:
+#### b. **MySQL Komut Satırı Kullanıyorsanız**:
+
+Aşağıdaki komutu kullanarak veritabanını dışa aktarabilirsiniz:
+
+```bash
+mysqldump -u [kullanıcı_adınız] -p qr-menu-script > qr-menu-script.sql
+```
+
+Bu komut, `qr-menu-script` veritabanını bir `.sql` dosyasına dışa aktarır.
+
+### 2. **README Dosyasına Veritabanı Yedekleme Bilgisi Ekleme**
+
+Aşağıdaki adımları README dosyanıza ekleyebilirsiniz:
+
+---
+
+## **Veritabanı Kurulumu** 🗄️
+
+Eğer veritabanınızı manuel olarak kurmak istiyorsanız, aşağıdaki adımları izleyebilirsiniz:
+
+### 1. Veritabanı Yedeklemesi:
+Veritabanını dışa aktarmak için, `qr-menu-script.sql` dosyasını kullanabilirsiniz. Bu dosya, veritabanınızın yapısını ve içeriğini içerir.
+
+### 2. **Veritabanı Yedekleme Adımları**:
+
+1. **Veritabanını Yükleyin**:
+   Veritabanı yedeğinizi yüklemek için, dışa aktardığınız `.sql` dosyasını kullanın.
+
+   Eğer **phpMyAdmin** kullanıyorsanız:
+   - phpMyAdmin’e giriş yapın.
+   - Yeni bir veritabanı oluşturun (adı `qr-menu-script` olacak şekilde).
+   - **Import** (İçe Aktar) sekmesine tıklayın ve `qr-menu-script.sql` dosyasını seçin.
+
+   Eğer **MySQL Komut Satırı** kullanıyorsanız:
+   ```bash
+   mysql -u [kullanıcı_adınız] -p qr-menu-script < qr-menu-script.sql
+   ```
+
+2. **Veritabanı Yapısını Kontrol Edin**:
+   Veritabanınız yüklendikten sonra, gerekli tabloların ve verilerin bulunduğundan emin olun.
+
+---
+
+### 3. **README Dosyanızın Tam Hali**
+
+README dosyanızda, yukarıdaki veritabanı dışa aktarma adımlarını şu şekilde güncelleyebilirsiniz:
 
 ---
 
@@ -53,7 +90,7 @@ QR Kod tabanlı dijital menü sistemi, restoranlar için geliştirilmiş modern 
 
 #### 2.1. **Depoyu Klonlayın**:
 ```bash
-git clone https://github.com/bykeremx/Basic-Qr-Menu-Script.git
+git clone https://github.com/kullanıcı-adınız/Basic-Qr-Menu-Script.git
 ```
 
 #### 2.2. **Composer Paketlerini Yükleyin**:
@@ -62,24 +99,19 @@ cd Basic-Qr-Menu-Script
 composer install
 ```
 
-#### 2.3. **Env Dosyasını Düzenleyin**:
-Projenin kök dizininde `.env` dosyasını oluşturun ve veritabanı ayarlarını yapılandırın:
+#### 2.3. **Veritabanı Yedekleme ve Kurulum**:
+Veritabanınızı yüklemek için, `qr-menu-script.sql` dosyasını kullanabilirsiniz.
 
-```ini
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=qr_menu_db
-DB_USERNAME=root
-DB_PASSWORD=
-```
+1. **phpMyAdmin Kullanıyorsanız**:
+   - phpMyAdmin’e giriş yapın ve yeni bir veritabanı oluşturun (adı `qr-menu-script` olacak şekilde).
+   - **Import** sekmesine tıklayın ve `qr-menu-script.sql` dosyasını seçin.
+   
+2. **MySQL Komut Satırı Kullanıyorsanız**:
+   ```bash
+   mysql -u [kullanıcı_adınız] -p qr-menu-script < qr-menu-script.sql
+   ```
 
-#### 2.4. **Veritabanı Migrasyonlarını Çalıştırın**:
-```bash
-php artisan migrate
-```
-
-#### 2.5. **Laravel'in Geliştirme Sunucusunu Başlatın**:
+#### 2.4. **Laravel'in Geliştirme Sunucusunu Başlatın**:
 ```bash
 php artisan serve
 ```
@@ -100,6 +132,7 @@ php artisan serve
 
 - **Menü Tasarımı**: Menü sayfasının görünümünü `resources/views` dizininde bulunan Blade şablonlarını düzenleyerek özelleştirebilirsiniz.
 - **Admin Paneli**: Admin paneli üzerinden menü ve kategori düzenlemelerini kolayca yapabilirsiniz. Admin paneli kullanıcı rolü yönetimini `app/Models/User.php` dosyasından yapılandırabilirsiniz.
+
 ---
 
 ## **Katkıda Bulunma** 🌟
@@ -115,7 +148,4 @@ Eğer projeye katkıda bulunmak isterseniz, aşağıdaki adımları takip edebil
 ## **Lisans** 📄
 
 Bu proje **MIT Lisansı** altında lisanslanmıştır.
-
 ---
-
-
